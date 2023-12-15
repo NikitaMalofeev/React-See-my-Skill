@@ -13,15 +13,18 @@
     "allowJs": true,
     //
     "moduleResolution": "node",
-    // для возможности классически импортировать 
+    // для возможности классически импортировать
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     // для абсолютного импорта
-    // "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
-        "module": "CommonJs"
+      "module": "CommonJs"
     }
   }
 }
