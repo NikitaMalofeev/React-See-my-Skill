@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // подсветка не типизированных переменных
+    "noImplicitAny": true,
+    // FIXME поменял модуль с es6 на esnext
+    "module": "ESNext",
+    // в какую спецификацию компилируется
+    "target": "es5",
+    //
+    "jsx": "react-jsx",
+    // поддержка jsx js файлов
+    "allowJs": true,
+    //
+    "moduleResolution": "node",
+    // для возможности классически импортировать 
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // для абсолютного импорта
+    // "baseUrl": "."
+  },
+  "ts-node": {
+    "compilerOptions": {
+        "module": "CommonJs"
+    }
+  }
+}
