@@ -37,8 +37,15 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': ['warning', { markupOnly: true }],
+
         'comma-dangle': 'off',
+        'arrow-body-style': 'off',
+        'react/self-closing-comp': 'off',
+        'react/jsx-wrap-multilines': 'off',
+        'linebreak-style': 'off',
+
+        'max-len': ['error', { ignoreComments: true }],
     },
     globals: {
         __IS_DEV__: true,
