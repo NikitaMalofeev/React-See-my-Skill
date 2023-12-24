@@ -1,18 +1,20 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
-import '@testing-library/jest-dom';
-import { Sidebar } from './Sidebar';
+import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
+import {
+    renderWithTranslation,
+} from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
 
 describe('Sidebar', () => {
-    test('with only text', () => {
+    test('with only first param', () => {
         renderWithTranslation(<Sidebar />);
-        expect(screen.getByTestId('Sidebar')).toBeInTheDocument();
+        expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
-    test('test toggle event', () => {
+    test('test toggle', () => {
         renderWithTranslation(<Sidebar />);
         const toggleBtn = screen.getByTestId('sidebar-toggle');
+        expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleBtn);
-        expect(screen.getByTestId('Sidebar')).toHaveClass('collapsed');
+        expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
     });
 });
