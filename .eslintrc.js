@@ -37,7 +37,10 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['warning', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'error',
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
+        ],
 
         'comma-dangle': 'off',
         'arrow-body-style': 'off',
@@ -45,9 +48,17 @@ module.exports = {
         'react/jsx-wrap-multilines': 'off',
         'linebreak-style': 'off',
 
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { ignoreComments: true, code: 120 }],
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
