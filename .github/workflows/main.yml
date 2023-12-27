@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node-version: [17.x]
+                node-version: [18.x]
 
         steps:
             - uses: actions/checkout@v2
@@ -19,6 +19,12 @@ jobs:
                   node-version: ${{matrix.node-version}}
             - name: install modules
               run: npm install
+
+            - name: Clear npm cache
+              run: npm cache clean --force
+            - name: Set git config
+              run: git config core.ignorecase false
+
             - name: build production project
               run: npm run build:prod
 
