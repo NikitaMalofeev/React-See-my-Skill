@@ -48,6 +48,7 @@ module.exports = {
         'comma-dangle': 'off',
         'linebreak-style': 'off',
         'object-curly-newline': 'off',
+        'wrap-iife': 'off',
     },
     globals: {
         __IS_DEV__: true,
