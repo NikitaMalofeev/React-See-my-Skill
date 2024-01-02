@@ -17,7 +17,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -37,18 +37,25 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': [
-            'error',
-            {
-                markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to'],
-            },
-        ],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
+        // 'i18next/no-literal-string': [
+        //     'error',
+        //     {
+        //         markupOnly: true,
+        //         ignoreAttribute: ['data-testid', 'to'],
+        //     },
+        // ],
         'max-len': ['error', { ignoreComments: true, code: 110 }],
         'comma-dangle': 'off',
         'linebreak-style': 'off',
         'object-curly-newline': 'off',
         'wrap-iife': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'i18next/no-literal-string': 'off',
+        'implicit-arrow-linebreak': 'off',
+        'operator-linebreak': 'off',
     },
     globals: {
         __IS_DEV__: true,
