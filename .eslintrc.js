@@ -56,6 +56,7 @@ module.exports = {
         'i18next/no-literal-string': 'off',
         'implicit-arrow-linebreak': 'off',
         'operator-linebreak': 'off',
+        'no-param-reassign': 'off',
     },
     globals: {
         __IS_DEV__: true,
